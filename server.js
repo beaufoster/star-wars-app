@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
-const PORT = process.env.PORT || 8000
+const PORT = 2121
 
 MongoClient.connect('mongodb+srv://beaudfoster:MQc1LwtgVcBx7Y2p@cluster0.imeuf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(client =>{
     console.log('Connected to Database')
@@ -65,11 +65,9 @@ MongoClient.connect('mongodb+srv://beaudfoster:MQc1LwtgVcBx7Y2p@cluster0.imeuf.m
           })
           .catch(error => console.error(error))
       })
-
-
-    app.listen(PORT, ()=>{
-        console.log('listnening on 3000')
-    })
-
-
 }).catch(console.error)
+
+
+app.listen(process.env.PORT || PORT, ()=>{
+    console.log(`Server running on port ${PORT}`)
+})
