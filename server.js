@@ -67,7 +67,7 @@ MongoClient.connect('mongodb+srv://beaudfoster:MQc1LwtgVcBx7Y2p@cluster0.imeuf.m
       })
 
 
-    app.listen(PORT, (req,res)=>{
+    app.listen(PORT, ()=>{
         console.log('listnening on 3000')
     })
 
