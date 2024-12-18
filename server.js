@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8000
 
 MongoClient.connect('mongodb+srv://beaudfoster:MQc1LwtgVcBx7Y2p@cluster0.imeuf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(client =>{
     console.log('Connected to Database')
